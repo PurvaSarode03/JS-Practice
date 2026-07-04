@@ -29,43 +29,43 @@ const a= require('mysql2')
 
  conncetDB()
 
-//  function insertEmp(name,salary){
-//     const user={name,salary}
-//     db.query("insert into emp set ?",user,(err)=>{
-//         if(err)
-//             console.log(err);
-//         else
-//             console.log("inserted..");
+ function insertEmp(name,salary){
+    const user={name,salary}
+    db.query("insert into emp set ?",user,(err)=>{
+        if(err)
+            console.log(err);
+        else
+            console.log("inserted..");
             
             
-//     })
-//  }
-//  insertEmp("om",768687)
+    })
+ }
+ insertEmp("om",768687)
 
-//  function displayEmp(){
-//     db.query("select * from Emp",(err,result)=>{
-//         if(err)
-//             console.log(err);
-//         else
-//             console.log(result);
+ function displayEmp(){
+    db.query("select * from Emp",(err,result)=>{
+        if(err)
+            console.log(err);
+        else
+            console.log(result);
             
             
-//     })
-//  }
-//  displayEmp()
+    })
+ }
+ displayEmp()
 
-//  function update(name,salary,id){
-//     const user=[name,salary,id]
-//     db.query("update emp set name=?,salary=? where id=?",user,(err)=>{
-//         if(err)
-//             console.log(err);
-//         else
-//             console.log("updated..");
+ function update(name,salary,id){
+    const user=[name,salary,id]
+    db.query("update emp set name=?,salary=? where id=?",user,(err)=>{
+        if(err)
+            console.log(err);
+        else
+            console.log("updated..");
             
             
-//     })
-//  }
-//  update("shashnak",1878787,4)
+    })
+ }
+ update("shashank",1878787,4)
 
  function deleteEmp(id){
     db.query("delete from emp where id =?",id,(err)=>{
